@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: ML
+Version: 0.0.1
+Author: Mohamed Aklamaash
+Author-email: aklamaash78@gmail.com
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
