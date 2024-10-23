@@ -1,0 +1,10 @@
+2024-10-23 17:58:07,287 - 22 - root - INFO - Data ingestion pipeline is started
+2024-10-23 17:58:07,293 - 25 - root - INFO - Read the dataset as a dataframe
+2024-10-23 17:58:07,302 - 30 - root - INFO - train test split initiated
+2024-10-23 17:58:07,312 - 38 - root - INFO - ingestion of data is updated
+2024-10-23 17:58:07,318 - 49 - root - INFO - Categorical Columns encoding completed!
+2024-10-23 17:58:07,319 - 50 - root - INFO - Numerical columns are standard scaled
+2024-10-23 17:58:07,321 - 86 - root - INFO - Appling transformation to train and test object
+2024-10-23 17:58:07,349 - 96 - root - INFO - Saved preprocessing object.
+2024-10-23 17:58:07,350 - 33 - root - INFO - splitting train and test data
+2024-10-23 17:58:09,848 - 59 - root - INFO - Best model is found on both train and test dataset

@@ -29,7 +29,7 @@ class DataTransformation:
                 "parental_level_of_education",
                 "lunch",
                 "test_preparation_course"
-            ]
+            ] 
 
             num_pipeline = Pipeline(
                 steps=[
@@ -42,7 +42,7 @@ class DataTransformation:
                 steps=[
                     ("imputer", SimpleImputer(strategy="most_frequent")),
                     ("onehotencoder", OneHotEncoder()),
-                    ("stdscaling", StandardScaler(with_mean=False))  # for one-hot encoded data
+                    ("stdscaling", StandardScaler(with_mean=False))
                 ]
             )
 
@@ -96,10 +96,8 @@ class DataTransformation:
             logging.info(f"Saved preprocessing object.")
 
             save_object(
-
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,
                 obj=preprocessor_obj
-
             )
 
             return (
