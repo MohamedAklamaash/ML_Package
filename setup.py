@@ -3,7 +3,7 @@ from typing import List
 
 def get_Requirements(path:str)->List[str]:
     '''
-        importing all the required files
+        importing all the required packages from file
     '''
     requirements:List[str] = []
     HYPEN_E_DOT:str = "-e ."
