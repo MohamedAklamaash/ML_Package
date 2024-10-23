@@ -1,8 +1,0 @@
-2024-10-20 14:21:47,091 - 8 - root - ERROR - Division by zero error occurred
-Traceback (most recent call last):
-  File "/tmp/ipykernel_1034/185911761.py", line 6, in <module>
-    a = 1 / 0  # This will raise a ZeroDivisionError
-        ~~^~~
-ZeroDivisionError: division by zero
-2024-10-20 14:27:05,343 - 148 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-2024-10-20 14:27:05,343 - 160 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
