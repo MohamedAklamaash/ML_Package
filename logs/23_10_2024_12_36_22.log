@@ -1,0 +1,8 @@
+2024-10-23 12:36:23,547 - 21 - root - INFO - Data ingestion pipeline is started
+2024-10-23 12:36:23,550 - 24 - root - INFO - Read the dataset as a dataframe
+2024-10-23 12:36:23,553 - 29 - root - INFO - train test split initiated
+2024-10-23 12:36:23,557 - 37 - root - INFO - ingestion of data is updated
+2024-10-23 12:36:23,560 - 51 - root - INFO - Categorical Columns encoding completed!
+2024-10-23 12:36:23,560 - 52 - root - INFO - Numerical columns are standard scaled
+2024-10-23 12:36:23,563 - 89 - root - INFO - Appling transformation to train and test object
+2024-10-23 12:36:23,576 - 99 - root - INFO - Saved preprocessing object.

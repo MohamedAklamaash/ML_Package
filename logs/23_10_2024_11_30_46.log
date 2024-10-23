@@ -1,4 +1,0 @@
-2024-10-23 11:30:47,913 - 20 - root - INFO - Data ingestion pipeline is started
-2024-10-23 11:30:47,916 - 23 - root - INFO - Read the dataset as a dataframe
-2024-10-23 11:30:47,921 - 28 - root - INFO - train test split initiated
-2024-10-23 11:30:47,926 - 36 - root - INFO - ingestion of data is updated
