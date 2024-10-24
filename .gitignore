@@ -3,3 +3,7 @@ __pycache__
 artifacts/
 .env
 .artifacts
+Lib/
+Include/
+Scripts/
+*.cfg
