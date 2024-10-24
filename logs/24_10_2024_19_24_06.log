@@ -1,0 +1,19 @@
+2024-10-24 19:24:06,998 - 97 - werkzeug - WARNING -  * Debugger is active!
+2024-10-24 19:24:06,999 - 97 - werkzeug - INFO -  * Debugger PIN: 127-185-226
+2024-10-24 19:24:09,811 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:24:09] "POST /predictdata HTTP/1.1" 200 -
+2024-10-24 19:24:24,653 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:24:24] "POST /predictdata HTTP/1.1" 200 -
+2024-10-24 19:24:38,989 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:24:38] "POST /predictdata HTTP/1.1" 200 -
+2024-10-24 19:24:48,689 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:24:48] "POST /predictdata HTTP/1.1" 200 -
+2024-10-24 19:29:15,742 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:29:15] "GET / HTTP/1.1" 200 -
+2024-10-24 19:31:13,071 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:31:13] "GET / HTTP/1.1" 200 -
+2024-10-24 19:31:14,763 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:31:14] "GET /predictdata HTTP/1.1" 200 -
+2024-10-24 19:31:23,901 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:31:23] "GET /predictdata HTTP/1.1" 200 -
+2024-10-24 19:32:29,603 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:32:29] "GET / HTTP/1.1" 200 -
+2024-10-24 19:32:56,791 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:32:56] "GET /predictdata HTTP/1.1" 200 -
+2024-10-24 19:33:11,880 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:33:11] "GET /predictdata HTTP/1.1" 200 -
+2024-10-24 19:33:34,552 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:33:34] "POST /predictdata HTTP/1.1" 200 -
+2024-10-24 19:33:51,840 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:33:51] "POST /predictdata HTTP/1.1" 200 -
+2024-10-24 19:33:57,404 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:33:57] "POST /predictdata HTTP/1.1" 200 -
+2024-10-24 19:34:05,292 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:34:05] "GET / HTTP/1.1" 200 -
+2024-10-24 19:36:51,717 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:36:51] "GET /predictdata HTTP/1.1" 200 -
+2024-10-24 19:36:55,101 - 97 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2024 19:36:55] "GET / HTTP/1.1" 200 -

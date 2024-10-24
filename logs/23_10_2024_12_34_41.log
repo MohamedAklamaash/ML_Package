@@ -1,8 +1,0 @@
-2024-10-23 12:34:41,877 - 21 - root - INFO - Data ingestion pipeline is started
-2024-10-23 12:34:41,880 - 24 - root - INFO - Read the dataset as a dataframe
-2024-10-23 12:34:41,883 - 29 - root - INFO - train test split initiated
-2024-10-23 12:34:41,888 - 37 - root - INFO - ingestion of data is updated
-2024-10-23 12:34:41,890 - 47 - root - INFO - Categorical Columns encoding completed!
-2024-10-23 12:34:41,891 - 48 - root - INFO - Numerical columns are standard scaled
-2024-10-23 12:34:41,893 - 80 - root - INFO - Appling transformation to train and test object
-2024-10-23 12:34:41,901 - 106 - root - ERROR - error in data tranformation

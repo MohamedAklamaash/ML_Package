@@ -5,9 +5,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.prediction_pipeline import CustomDataClass,PredictPipeline
 
-application = Flask(__name__)
-
-app = application
+app = Flask(__name__)
 
 @app.route("/")
 def index():
@@ -25,7 +23,7 @@ def predict_datapoint():
             lunch=request.form.get("lunch"),
             race_ethinicity=request.form.get("ethnicity"),
             parental_level_of_education=request.form.get("parental_level_of_education"),
-            reading_score=float(request.form.get(   "reading_score")),
+            reading_score=float(request.form.get("reading_score")),
             test_preparation_course= request.form.get("test_preparation_course"),
             writing_score= request.form.get("writing_score")
         )
