@@ -8,7 +8,8 @@ import pickle
 from sklearn.metrics import r2_score,mean_absolute_error,mean_squared_error
 from sklearn.model_selection import GridSearchCV
 from typing import List
-
+from sklearn.model_selection import RandomizedSearchCV
+from src.params import param_grid
 from src.exception import CustomException
 
 def save_object(file_path, obj):
@@ -31,40 +32,45 @@ def evaluateModel(true:List[float],predicted:List[float])->List[float]:
     r2_sq = r2_score(true,predicted)
     return mae,rmse,r2_sq
 
-def modelEvaluation(x_train,y_train,x_test,y_test,models):
+def modelEvaluation(x_train, y_train, x_test, y_test, models):
     model_list = []
-    r2_list =[]
+    r2_list = []
     report = {}
-    for i in range(len(list(models))):
-        model = list(models.values())[i]
-        model.fit(x_train, y_train) 
 
+    for model_name, model in models.items():
+        # Get the corresponding parameters for this model from param_grid
+        para = param_grid.get(model_name, {})  # Use .get() to safely fetch parameters
+        
+        if para:  # If param_grid contains parameters for this model
+            gs = GridSearchCV(model, para, cv=3, n_jobs=-1)
+            gs.fit(x_train, y_train)
+            model = gs.best_estimator_  # Use the best estimator from GridSearchCV
+        else:
+            # Fit the model without hyperparameter tuning
+            model.fit(x_train, y_train)
+
+        # After fitting, use the model to predict
         y_train_pred = model.predict(x_train)
         y_test_pred = model.predict(x_test)
-        
-        model_train_mae , model_train_rmse, model_train_r2 = evaluateModel(y_train, y_train_pred)
 
-        model_test_mae , model_test_rmse, model_test_r2 = evaluateModel(y_test, y_test_pred)
+        # Evaluate model performance
+        model_train_mae, model_train_rmse, model_train_r2 = evaluateModel(y_train, y_train_pred)
+        model_test_mae, model_test_rmse, model_test_r2 = evaluateModel(y_test, y_test_pred)
 
-        report[list(models.keys())[i]] = model_test_r2
-        
-        print(list(models.keys())[i])
-        model_list.append(list(models.keys())[i])
-        
+        report[model_name] = model_test_r2
+
+        # Output the model performance metrics
+        print(model_name)
         print('Model performance for Training set')
-        print("- Root Mean Squared Error: {:.4f}".format(model_train_rmse))
-        print("- Mean Absolute Error: {:.4f}".format(model_train_mae))
-        print("- R2 Score: {:.4f}".format(model_train_r2))
-
+        print(f"- Root Mean Squared Error: {model_train_rmse:.4f}")
+        print(f"- Mean Absolute Error: {model_train_mae:.4f}")
+        print(f"- R2 Score: {model_train_r2:.4f}")
         print('----------------------------------')
-        
         print('Model performance for Test set')
-        print("- Root Mean Squared Error: {:.4f}".format(model_test_rmse))
-        print("- Mean Absolute Error: {:.4f}".format(model_test_mae))
-        print("- R2 Score: {:.4f}".format(model_test_r2))
-        r2_list.append(model_test_r2)
-        
-        print('='*35)
+        print(f"- Root Mean Squared Error: {model_test_rmse:.4f}")
+        print(f"- Mean Absolute Error: {model_test_mae:.4f}")
+        print(f"- R2 Score: {model_test_r2:.4f}")
+        print('=' * 35)
         print('\n')
-    
+
     return report

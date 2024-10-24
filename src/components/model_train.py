@@ -39,7 +39,7 @@ class ModelTrainer:
             # Define the models to train
             models = {
                 "Linear Regression": LinearRegression(),
-                "Lasso": Lasso(),
+                # "Lasso": Lasso(),
                 "Ridge": Ridge(),
                 "K-Nearest-Neighbour": KNeighborsRegressor(),
                 "Decision Tree": DecisionTreeRegressor(),
@@ -56,7 +56,6 @@ class ModelTrainer:
             bestmodelscore = max(model_report.values())
             bestmodelname = list(model_report.keys())[list(model_report.values()).index(bestmodelscore)]
             best_model = models[bestmodelname]
-
             if bestmodelscore < 0.6:
                 raise CustomException("No model performed well enough", sys)
 
@@ -69,7 +68,7 @@ class ModelTrainer:
             # Make predictions and return r2 score
             pred = best_model.predict(x_test)
             r2_square = r2_score(y_test, pred)
-
+            print(bestmodelname)
             return r2_square
 
         except Exception as e:
