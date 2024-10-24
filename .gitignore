@@ -1,8 +1,6 @@
 myenv/
 __pycache__
-artifacts/
 .env
-.artifacts
 Lib/
 Include/
 Scripts/
